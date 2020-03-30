@@ -1,0 +1,118 @@
+.vertical-menu {
+    display: block;
+    margin: 0;
+    vertical-align: middle;
+    text-align: left;
+    position: relative;
+}
+.vertical-menu > a {
+    padding: 0 26px 0 20px;
+    background-color: #0289C8;
+    color: #CEF6FF;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: relative;
+    line-height: 40px;
+    display: block;
+    border-bottom: solid 1px #3AABD6;
+    height: 40px;
+}
+.vertical-menu > a:last-of-type {
+    border: none 0;
+}
+.menu.vertical-menu > a i.arrow {
+    width: 26px;
+    height: 39px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    font-style: normal;
+    font-family: "FontAwesome";
+    margin: 0;
+    clear: both;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.menu.vertical-menu > a:hover,
+.menu.vertical-menu > a.active
+{
+    background-color: #066186;
+    text-decoration: none;
+}
+.menu.vertical-menu > a i.arrow:hover,
+.menu.vertical-menu > a.active i.arrow
+{
+    background-color: #044a66;
+}
+.menu.vertical-menu > a.drop-down:hover i.arrow::before,
+.menu.vertical-menu > a.drop-down.active i.arrow::before
+{
+    content: "\f105";
+}
+.vertical-menu > a + .sub-menu {
+    border-radius: 0;
+    overflow: hidden;
+    display: none;
+    width: 160px;
+    position: absolute;
+    font-size: 0.95em;
+    top: auto;
+    right: 0;
+    margin: -40px -160px 0 0;
+    z-index: 6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    filter: alpha(opacity=95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+    text-align: left;
+}
+.vertical-menu > a + .sub-menu a {
+    font-size: 12px;
+    line-height: 40px;
+    color: #fff;
+    text-transform: inherit;
+    border-bottom: solid 1px #198FBC;
+    padding: 0 15px;
+    margin: 0;
+    display: block;
+    background-color: #157CA7;
+    height: 40px;
+}
+.vertical-menu > a + .sub-menu a:last-of-type {
+    border: none 0;
+}
+.vertical-menu > a + .sub-menu a:hover,
+.vertical-menu > a + .sub-menu a.active,
+.vertical-menu > a + .sub-menu a.selected
+{
+    background-color: #115E80;
+    color: #FFFBD1;
+    text-decoration: none;
+}
+.vertical-menu > a.active + .sub-menu
+{
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    .vertical-menu > a {
+        padding: 0 50px 0 20px;
+    }
+    .vertical-menu > a + .sub-menu {
+        margin: 0;
+        position: relative;
+        width: 100%;
+    }
+    .vertical-menu > a + .sub-menu a {
+        padding: 0 30px;
+    }
+    .menu.vertical-menu > a.drop-down:hover i.arrow::before,
+    .menu.vertical-menu > a.drop-down.active i.arrow::before
+    {
+        content: "\f106";
+    }
+    .menu.vertical-menu > a i.arrow {
+        width: 40px;
+    }
+}

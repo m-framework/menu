@@ -1,0 +1,19 @@
+{
+  "title":"Navigation menus",
+  "name":"menu",
+  "description":"Module for operating a menu links. There are 3 main types of menu: `horizontal_menu`, `vertical_menu` and `footer_menu`.",
+  "icon":"<i class=\"fa fa-navicon\"></i>",
+  "version":"1.0",
+  "date":"2017-08-07",
+  "author":"mrinmiro@gmail.com",
+  "compatible_cores":["1.0"],
+  "dashboard_menu":{
+    "/horizontal":"<i class=\"fa fa-navicon\"></i> *Horizontal menu*",
+    "/vertical":"<i class=\"fa fa-navicon\"></i> *Vertical menu*",
+    "/footer":"<i class=\"fa fa-navicon\"></i> *Footer menu*",
+    "../../../admin/modules/options/menu":"<i class=\"fa fa-cog\"></i> *Module options*"
+  },
+  "tags":["menu","navigation","responsive menu"],
+  "price":"0",
+  "":""
+}

@@ -1,0 +1,530 @@
+.menu > a i.arrow {
+    width: 15px;
+    height: 50px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 12px;
+    font-style: normal;
+    display: none;
+    font-family: "FontAwesome";
+    clear: both;
+    margin: 0 -15px 0 0;
+}
+.menu > a.drop-down i.arrow {
+    display: inline-block;
+}
+.menu > a.drop-down i.arrow:before {
+    content: "\f107";
+    vertical-align: middle;
+}
+.menu > a.drop-down.active i.arrow::before
+{
+    content: "\f106";
+}
+.menu > a.drop-down:hover + span.sub-menu,
+.menu > a.drop-down + span.sub-menu:hover
+{
+    display: inline-block;
+}
+
+.horizontal-menu {
+    display: block;
+    position: relative;
+    min-height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    text-align: right;
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+    height: 50px;
+}
+.horizontal-menu.active {
+    z-index: 999;
+}
+.horizontal-menu.text-left {
+    text-align: left;
+}
+.horizontal-menu > a
+{
+    padding: 0 20px;
+    background-color: #0289C8;
+    color: #CEF6FF;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 1px;
+    font-size: 0.85em;
+}
+/*.horizontal-menu .search-link {*/
+    /*padding: 5px 10px;*/
+    /*min-width: 30px;*/
+    /*text-align: center;*/
+    /*margin-bottom: 0;*/
+    /*display: inline-block;*/
+    /*line-height: 40px;*/
+    /*vertical-align: top;*/
+/*}*/
+/*.horizontal-menu .search-link .fa {*/
+    /*width: 14px;*/
+    /*margin: 0 8px;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.horizontal-menu .search-link form {*/
+    /*display: none;*/
+/*}*/
+/*.horizontal-menu .search-link.active form {*/
+    /*display: inline-block;*/
+/*}*/
+/*.horizontal-menu .search-link.active .fa {*/
+    /*display: none;*/
+/*}*/
+/*.horizontal-menu .search-link input[type="text"]  {*/
+    /*display: none;*/
+    /*background-color: #fff;*/
+    /*border: none 0;*/
+    /*margin: 0;*/
+    /*height: 30px;*/
+    /*border-radius: 2px;*/
+    /*padding: 4px;*/
+    /*font-size: 12px;*/
+    /*min-height: 30px;*/
+/*}*/
+/*.horizontal-menu .search-link.active input[type="text"] {*/
+    /*display: inline-block;*/
+/*}*/
+.horizontal-menu a:hover,
+.horizontal-menu a.active,
+.horizontal-menu a.selected
+{
+    text-decoration: none;
+    background-color: #066186;
+    color: #FCFFD2;
+}
+.horizontal-menu a .arrow:hover,
+.horizontal-menu a.active .arrow
+{
+    background-color: #044a66;
+}
+.horizontal-menu a.logo {
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    background-color: transparent;
+    display: inline-block;
+    z-index: 5;
+    background-position: center center;
+}
+.horizontal-menu > a.link:nth-of-type(3) {
+    border-radius: 5px 0 0 5px;
+}
+.horizontal-menu > a.link:nth-of-type(9)
+{
+    border-radius: 0 5px 5px 0;
+}
+.horizontal-menu > a.login,
+.horizontal-menu > a.registration
+{
+    /*position: absolute;*/
+    /*text-transform: initial;*/
+    /*color: #066186;*/
+    /*left: 65px;*/
+    /*font-size: 12px;*/
+    /*text-decoration: none;*/
+    /*line-height: 12px;*/
+    /*padding: 3px 5px;*/
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    /*border-radius: 2px;*/
+}
+.horizontal-menu > a.login:hover,
+.horizontal-menu > a.registration:hover
+{
+    /*color: #fff;*/
+    /*background-color: #0289C8;*/
+}
+.horizontal-menu > a.login,
+.horizontal-menu.active > a.login
+{
+    /*top: 0;*/
+}
+.horizontal-menu > a.registration,
+.horizontal-menu.active > a.registration
+{
+    /*top: 0;*/
+    /*left: 115px;*/
+}
+.horizontal-menu > a + .sub-menu {
+    border-radius: 0;
+    overflow: hidden;
+    display: none;
+    width: 200px;
+    margin: 50px 0 0 -200px;
+    position: absolute;
+    font-size: 0.95em;
+    top: auto;
+    z-index: 6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    filter: alpha(opacity=95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+    text-align: left;
+}
+.horizontal-menu > a.languages + .sub-menu {
+    width: 45px;
+    margin: 50px 0 0 -45px;
+}
+.horizontal-menu.text-left > a + .sub-menu {
+    margin: 50px 0 0 -100px;
+}
+.horizontal-menu > a + .sub-menu a {
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    text-transform: inherit;
+    border-bottom: solid 1px #198FBC;
+    padding: 10px 15px;
+    margin: 0;
+    display: block;
+    background-color: #157CA7;
+}
+.horizontal-menu > a + .sub-menu a:last-of-type {
+    border: none 0;
+}
+.horizontal-menu > a + .sub-menu a:hover,
+.horizontal-menu > a + .sub-menu a.active,
+.horizontal-menu > a + .sub-menu a.selected
+{
+    background-color: #115E80;
+    color: #FFFBD1;
+    text-decoration: none;
+}
+.horizontal-menu > a.active + .sub-menu
+{
+    display: inline-block;
+}
+.horizontal-menu .menu-toggle {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    min-height: 50px;
+    display: none;
+    text-align: center;
+    vertical-align: top;
+    position: absolute;
+    right: 0;
+    color: #FFF;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    top: 0;
+    z-index: 999;
+}
+.horizontal-menu .menu-toggle:before {
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    display: inline-block;
+}
+
+.horizontal-menu a.languages {
+    background-color: transparent;
+    color: #666;
+    margin-right: 20px;
+}
+.horizontal-menu a.languages i.arrow:hover {
+    background-color: #ebebeb;
+}
+.horizontal-menu a.personal-link {
+    padding: 0 30px 0 10px;
+}
+.horizontal-menu a.personal-link > img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.horizontal-menu .basket-link {
+    position: relative;
+}
+.horizontal-menu .basket-link .fa-shopping-basket {
+    font-size: 24px;
+    vertical-align: middle;
+}
+.horizontal-menu .basket-link .basket-count {
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+    font-size: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    line-height: 18px;
+    color: #000;
+}
+
+.horizontal-menu > a
+{
+    padding: 0 20px;
+    color: #CEF6FF;
+    text-transform: uppercase;
+    position: relative;
+}
+.horizontal-menu a .arrow:hover,
+.horizontal-menu a.active .arrow
+{
+    background-color: transparent;
+}
+.horizontal-menu > a + .sub-menu {
+    border-radius: 0;
+    overflow: hidden;
+    display: none;
+    width: 200px;
+    margin: 60px 0 0 -200px;
+    position: absolute;
+    font-size: 0.95em;
+    top: auto;
+    z-index: 5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    filter: alpha(opacity=95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+    text-align: left;
+}
+.horizontal-menu > a.languages + .sub-menu {
+    width: 45px;
+    margin: 60px 0 0 -65px;
+}
+.horizontal-menu.text-left > a + .sub-menu {
+    margin: 60px 0 0 -100px;
+}
+.horizontal-menu > a + .sub-menu a {
+    font-size: 13px;
+    color: #fff;
+    text-transform: inherit;
+    border-bottom: solid 1px #B2C1C6;
+    padding: 8px 15px;
+    margin: 0;
+    display: block;
+    background-color: #8FADB9;
+    height: auto;
+    line-height: 20px;
+    min-height: 20px;
+}
+.horizontal-menu > a + .sub-menu a:last-of-type {
+    border: none 0;
+}
+.horizontal-menu > a + .sub-menu a:hover,
+.horizontal-menu > a + .sub-menu a.active,
+.horizontal-menu > a + .sub-menu a.selected
+{
+    background-color: #B1B1B1;
+    color: #FFF;
+    text-decoration: none;
+}
+.horizontal-menu > a.active + .sub-menu
+{
+    display: inline-block;
+}
+.horizontal-menu .menu-toggle {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    min-height: 60px;
+    display: none;
+    text-align: center;
+    vertical-align: top;
+    right: -8px;
+    color: #FFF;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #46aeea;
+}
+.horizontal-menu .menu-toggle:before {
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    display: inline-block;
+}
+
+.horizontal-menu a.languages i.arrow:hover {
+    background-color: transparent;
+}
+
+.horizontal-menu a[href] {
+    min-height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    padding: 0 15px;
+    color: #333;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 0.85em;
+}
+.horizontal-menu a[href]:hover {
+    text-decoration: none;
+    background-color: #eaeaea;
+}
+.horizontal-menu a[href].active,
+.horizontal-menu a[href].selected
+{
+    text-decoration: none;
+    background-color: #46aeea;
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .horizontal-menu > a:not(.logo):not(.social):not(.languages):not(.login):not(.registration):not(.menu-toggle) {
+        display: none;
+    }
+    .horizontal-menu .menu-toggle {
+        display: inline-block;
+        /*position: static;*/
+    }
+    .horizontal-menu.active > a:not(.logo):not(.social):not(.languages):not(.login):not(.registration):not(.menu-toggle) {
+        display: block;
+        float: left;
+        clear: both;
+        line-height: 40px;
+        padding: 0 60px 0 20px;
+        min-height: 20px;
+        position: relative;
+        margin-top: 1px;
+    }
+    .horizontal-menu > a + .sub-menu {
+        top: auto;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        text-align: right;
+    }
+    .horizontal-menu.active .menu-toggle:before {
+        content: "\f00d";
+    }
+    .horizontal-menu .menu-toggle:before {
+        font-size: 24px;
+        vertical-align: top;
+    }
+    .menu.horizontal-menu > a.drop-down.active + span.sub-menu,
+    .horizontal-menu > a.active + .sub-menu {
+        display: none;
+    }
+    .menu.active > a.drop-down.active + span.sub-menu,
+    .menu.active > a.drop-down.selected + span.sub-menu,
+    .horizontal-menu.active a.active + .sub-menu {
+        display: block;
+    }
+    .horizontal-menu > a + .sub-menu a {
+        padding: 10px 40px 10px 15px;
+    }
+    /*.horizontal-menu .search-link,*/
+    /*.horizontal-menu .search-link .fa*/
+    /*{*/
+        /*display: none;*/
+    /*}*/
+    /*.horizontal-menu.active .search-link,*/
+    /*.horizontal-menu.active .search-link input[type="text"] {*/
+        /*display: block;*/
+    /*}*/
+    .menu > a.drop-down.languages:hover + span.sub-menu,
+    .menu > a.drop-down.languages + span.sub-menu:hover,
+    .menu.horizontal-menu > a.drop-down.languages.active + span.sub-menu
+    {
+        display: inline-block;
+        position: absolute;
+    }
+
+    .horizontal-menu > a[href]:not(.logo):not(.social):not(.languages):not(.login):not(.registration):not(.menu-toggle) {
+        display: none;
+    }
+    .horizontal-menu .menu-toggle {
+        display: inline-block;
+    }
+    .horizontal-menu.active > a[href]:not(.logo):not(.social):not(.languages):not(.login):not(.registration):not(.menu-toggle) {
+        display: block;
+        float: none;
+        clear: both;
+        height: auto;
+        line-height: 50px;
+        padding: 0 60px 0 20px;
+        min-height: 20px;
+        position: relative;
+    }
+    .horizontal-menu > a + .sub-menu {
+        top: auto;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        text-align: right;
+    }
+    .horizontal-menu.active .menu-toggle:before {
+        content: "\f00d";
+    }
+    .horizontal-menu .menu-toggle:before {
+        font-size: 24px;
+        vertical-align: top;
+    }
+    .menu.horizontal-menu > a.drop-down.active + span.sub-menu,
+    .horizontal-menu > a.active + .sub-menu {
+        display: none;
+    }
+    .menu.active > a.drop-down.active + span.sub-menu,
+    .menu.active > a.drop-down.selected + span.sub-menu,
+    .horizontal-menu.active a.active + .sub-menu {
+        display: block;
+    }
+    .horizontal-menu > a + .sub-menu a {
+        padding: 0 40px 0 15px;
+    }
+    .menu > a.drop-down.languages:hover + span.sub-menu,
+    .menu > a.drop-down.languages + span.sub-menu:hover,
+    .menu.horizontal-menu > a.drop-down.languages.active + span.sub-menu
+    {
+        display: inline-block;
+        position: absolute;
+    }
+    .horizontal-menu.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.8);
+        float: none;
+        clear: both;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        bottom: 0;
+        overflow-y: auto;
+        padding: 0 10px;
+    }
+    .horizontal-menu a.languages {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .horizontal-menu > a + .sub-menu {
+        top: auto;
+        margin-top: 0;
+    }
+    .horizontal-menu .menu-toggle {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        min-height: 40px;
+    }
+}
